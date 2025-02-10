@@ -1,0 +1,161 @@
+<html>
+  <head>
+    <title>随鹭办 - 线下办理</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"
+    />
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body
+    class="mdui-theme-primary-indigo mdui-theme-accent-indigo mdui-appbar-with-toolbar mdui-drawer-body-left"
+  >
+    <div class="appbar mdui-appbar mdui-appbar-fixed mdui-shadow-0">
+      <div class="mdui-toolbar mdui-color-theme">
+        <a
+          href="javascript:;"
+          class="mdui-btn mdui-btn-icon"
+          id="toggle"
+          onclick="var $ = mdui.$;var inst = new mdui.Drawer('#left-drawer');inst.toggle();"
+        >
+          <i class="mdui-icon material-icons">menu</i>
+        </a>
+        <a href="/" class="mdui-typo-title"> 随鹭办 Issue Luzhou </a>
+        <div class="mdui-toolbar-spacer"></div>
+        <a class="mdui-btn mdui-btn-icon" onclick="location.reload();">
+          <i class="mdui-icon material-icons">refresh</i>
+        </a>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+          <i class="mdui-icon material-icons">more_vert</i>
+        </a>
+      </div>
+    </div>
+
+    <div class="mdui-drawer mdui-drawer-open" id="left-drawer">
+      <ul class="mdui-list" mdui-collapse="{accordion: true}">
+        <li class="mdui-list-item mdui-ripple" onclick="location.replace('/')">
+          <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+          <div class="mdui-list-item-content">主页</div>
+        </li>
+
+        <li class="mdui-collapse-item mdui-collapse-item-open">
+          <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons"
+              >assistant</i
+            >
+            <div class="mdui-list-item-content">服务</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons"
+              >keyboard_arrow_down</i
+            >
+          </div>
+          <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+            <li
+              class="mdui-list-item mdui-ripple"
+              onclick="location.replace('/Issues/Navigation/')"
+            >
+              线下办证
+            </li>
+            <li
+              class="mdui-list-item mdui-ripple"
+              onclick="location.replace('/Issues/Online/')"
+            >
+              线上办证
+            </li>
+          </ul>
+        </li>
+
+        <li
+          class="mdui-list-item mdui-ripple mdui-list-item-active"
+          onclick="location.replace('/About/')"
+        >
+          <i class="mdui-list-item-icon mdui-icon material-icons"
+            >information</i
+          >
+          <div class="mdui-list-item-content">关于...</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mdui-container mdui-m-t-5">
+      <div class="mdui-typo">
+        <p class="mdui-typo-headline"><b>随鹭办 | 鹭州市居民身份证办理平台</b></p>
+        
+        <b>制作人员：</b>
+        <div class="mdui-container-fluid">
+            <div class="mdui-row">
+                    <ul class="mdui-list mdui-col-xs-2">
+                        <a class="mdui-list-item mdui-ripple">
+                          <div class="mdui-list-item-avatar">
+                            <img src="https://avatars.githubusercontent.com/u/165374374?v=4&size=64"/>
+                          </div>
+
+                          <div class="mdui-list-item-content">
+                            <div class="mdui-list-item-title">awa_EricXHJ</div>
+                            <div class="mdui-list-item-text mdui-list-item-one-line">
+                              <span class="mdui-text-color-theme-text">网页开发</span>
+                            </div>
+                          </div>
+                        </a>
+                    </ul>
+
+                    <ul class="mdui-list mdui-col-xs-2">
+                        <a class="mdui-list-item mdui-ripple" href="https://github.com/ZhiFengCode">
+                          <div class="mdui-list-item-avatar">
+                            <img src="https://avatars.githubusercontent.com/u/99059155?s=48&v=4"/>
+                          </div>
+
+                          <div class="mdui-list-item-content">
+                            <div class="mdui-list-item-title">ZhiFengCode</div>
+                            <div class="mdui-list-item-text mdui-list-item-one-line">
+                              <span class="mdui-text-color-theme-text">域名赞助</span>
+                            </div>
+                          </div>
+                        </a>
+                    </ul>
+            </div>
+        </div>
+
+        <b class="mdui-m-t-3">友情链接：</b>
+        <div class="mdui-container-fluid">
+            <div class="mdui-row">
+                <div class="mdui-col-xs-6">
+                    <ul class="mdui-list">
+                        <a class="mdui-list-item mdui-ripple" href="https://github.com/awaEricXHJ/awaericxhj.github.io">
+                            <i class="mdui-list-item-avatar mdui-icon material-icons mdui-color-black mdui-text-color-white">code</i>
+
+                          <div class="mdui-list-item-content">
+                            <div class="mdui-list-item-title">awaEricXHJ
+                                /
+                                awaericxhj.github.io</div>
+                            <div class="mdui-list-item-text mdui-list-item-one-line">
+                              <span class="mdui-text-color-theme-text">随鹭办Github存储库，大部分代码都在这啦🤔</span>
+                            </div>
+                          </div>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="mdui-col-xs-6">
+                    <ul class="mdui-list">
+                        <a class="mdui-list-item mdui-ripple" href="https://www.mdui.org/docs/introduction">
+                            <i class="mdui-list-item-avatar mdui-icon material-icons mdui-color-blue mdui-text-color-white">format_paint</i>
+
+                          <div class="mdui-list-item-content">
+                            <div class="mdui-list-item-title">MDUI v1</div>
+                            <div class="mdui-list-item-text mdui-list-item-one-line">
+                              <span class="mdui-text-color-theme-text">随鹭办使用的CSS（样式表），总而言之就是让网站更好看的东东</span>
+                            </div>
+                          </div>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
