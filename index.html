@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>随鹭办 Issue Luzhou | 鹭州市居民身份证办理平台</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"
+    />
+    <link
+      rel="icon"
+      href="https://www.aconvert.com/cn/file.php?l=s11.aconvert.com/convert/p3r68-cdx67/pk0ay-2wnlw-001.ico"
+    />
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body
+    class="mdui-theme-primary-indigo mdui-theme-accent-pink mdui-drawer-body-left mdui-appbar-with-toolbar"
+  >
+    <div class="mdui-appbar mdui-shadow-0 mdui-appbar-fixed">
+      <div class="mdui-toolbar mdui-color-theme">
+        <a
+          href="javascript:;"
+          class="mdui-btn mdui-btn-icon"
+          onclick="var $ = mdui.$;var inst = new mdui.Drawer('#left-drawer');inst.toggle();"
+        >
+          <i class="mdui-icon material-icons">menu</i>
+        </a>
+        <a href="javascript:;" class="mdui-typo-title"> 随鹭办 Issue Luzhou </a>
+        <div class="mdui-toolbar-spacer"></div>
+        <a class="mdui-btn mdui-btn-icon" onclick="location.reload();">
+          <i class="mdui-icon material-icons">refresh</i>
+        </a>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+          <i class="mdui-icon material-icons">more_vert</i>
+        </a>
+      </div>
+    </div>
+
+    <div class="mdui-container">
+      <div class="mdui-tab" mdui-tab>
+        <a href="#issue" class="mdui-ripple mdui-ripple-white">
+          <i class="mdui-icon material-icons">send</i>
+          <label>办证</label>
+        </a>
+        <a href="#staff" class="mdui-ripple mdui-ripple-white">
+          <i class="mdui-icon material-icons">perm_contact_calendar</i>
+          <label>咨询</label>
+        </a>
+      </div>
+
+      <div id="issue" class="mdui-p-a-5">
+        <div class="mdui-panel" mdui-panel>
+          <div class="mdui-panel-item">
+            <div class="mdui-panel-item-header">
+              <b>线下办理</b
+              ><i class="mdui-panel-item-arrow mdui-icon material-icons"
+                >keyboard_arrow_down</i
+              >
+            </div>
+            <div class="mdui-panel-item-body">
+              <p>查找鹭州开放的身份证办理点。</p>
+              <p>选择办证点名称，在卡片上查看办证点名称和附近的车站！</p>
+              <p>点击下方“导航”按钮获取到达办证点的详细方法。</p>
+
+              <a
+                class="mdui-btn mdui-color-theme mdui-ripple"
+                href="/Issues/Navigation/"
+              >
+                查找
+              </a>
+            </div>
+          </div>
+
+          <div class="mdui-panel-item">
+            <div class="mdui-panel-item-header">
+              <b>线上办理</b
+              ><i class="mdui-panel-item-arrow mdui-icon material-icons"
+                >keyboard_arrow_down</i
+              >
+            </div>
+            <div class="mdui-panel-item-body">
+              <p>选择自动发送或手动申请方式</p>
+              <p>在何处也可快速发送办理申请。</p>
+              <p class="mdui-typo">
+                制作完成的身份证一般会被上传至<a href="https://lanzou.com/"
+                  >蓝奏云</a
+                >，
+              </p>
+              <p>并在鹭州内群向您发出提醒，敬请留意。</p>
+
+              <a
+                class="mdui-btn mdui-color-theme mdui-ripple"
+                href="/Issues/Online/"
+              >
+                申请
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="staff" class="mdui-p-a-5">
+        <p>随鹭办官方人员：</p>
+        <ul class="mdui-list">
+          <li
+            class="mdui-list-item mdui-ripple"
+            onclick="window.open('mailto:recovery.ericxzm@outlook.com')"
+          >
+            <div class="mdui-list-item-avatar">
+              <img src="https://iili.io/2bzcQkP.md.jpg" />
+            </div>
+            <div class="mdui-list-item-content">
+              <div class="mdui-list-item-title">
+                awa_EricXHJ （AAA鹭州地铁传媒）<i
+                  class="mdui-icon material-icons"
+                  >email</i
+                >
+              </div>
+              <div class="mdui-list-item-text mdui-list-item-one-line">
+                <span class="mdui-text-color-theme-text">随鹭办线上</span> -
+                首席制证员
+              </div>
+            </div>
+          </li>
+          <li class="mdui-list-item mdui-ripple">
+            <div class="mdui-list-item-avatar">
+              <img src="https://iili.io/2bzcDTF.md.jpg" />
+            </div>
+            <div class="mdui-list-item-content">
+              <div class="mdui-list-item-title">
+                Kokone5701 （AAA美妙系列激推ここね）
+              </div>
+              <div class="mdui-list-item-text mdui-list-item-one-line">
+                <span class="mdui-text-color-theme-text">随鹭办线上</span> -
+                首席设计师
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mdui-drawer mdui-drawer-open" id="left-drawer">
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+          <li
+            class="mdui-list-item mdui-ripple mdui-list-item-active"
+            onclick="location.replace('/')"
+          >
+            <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+            <div class="mdui-list-item-content">主页</div>
+          </li>
+
+          <li class="mdui-collapse-item mdui-collapse-item-open">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+              <i class="mdui-list-item-icon mdui-icon material-icons"
+                >assistant</i
+              >
+              <div class="mdui-list-item-content">服务</div>
+              <i class="mdui-collapse-item-arrow mdui-icon material-icons"
+                >keyboard_arrow_down</i
+              >
+            </div>
+            <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+              <li
+                class="mdui-list-item mdui-ripple"
+                onclick="location.replace('/Issues/Navigation/')"
+              >
+                线下办证
+              </li>
+              <li
+                class="mdui-list-item mdui-ripple"
+                onclick="location.replace('/Issues/Online/')"
+              >
+                线上办证
+              </li>
+            </ul>
+          </li>
+
+          <li
+            class="mdui-list-item mdui-ripple"
+            onclick="location.replace('/About/')"
+          >
+            <i class="mdui-list-item-icon mdui-icon material-icons"
+              >information</i
+            >
+            <div class="mdui-list-item-content">关于...</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

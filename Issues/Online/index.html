@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>随鹭办 - 线上办理</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"
+    />
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body
+    class="mdui-theme-primary-indigo mdui-theme-accent-indigo mdui-appbar-with-toolbar mdui-drawer-body-left"
+  >
+    <div class="appbar mdui-appbar mdui-appbar-fixed mdui-shadow-0">
+      <div class="mdui-toolbar mdui-color-theme">
+        <a
+          href="javascript:;"
+          class="mdui-btn mdui-btn-icon"
+          id="toggle"
+          onclick="var $ = mdui.$;var inst = new mdui.Drawer('#left-drawer');inst.toggle();"
+        >
+          <i class="mdui-icon material-icons">menu</i>
+        </a>
+        <a href="/" class="mdui-typo-title"> 随鹭办 Issue Luzhou </a>
+        <div class="mdui-toolbar-spacer"></div>
+        <a class="mdui-btn mdui-btn-icon" onclick="location.reload();">
+          <i class="mdui-icon material-icons">refresh</i>
+        </a>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+          <i class="mdui-icon material-icons">more_vert</i>
+        </a>
+      </div>
+    </div>
+
+    <div class="mdui-drawer mdui-drawer-open" id="left-drawer">
+      <ul class="mdui-list" mdui-collapse="{accordion: true}">
+        <li class="mdui-list-item mdui-ripple" onclick="location.replace('/')">
+          <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+          <div class="mdui-list-item-content">主页</div>
+        </li>
+
+        <li class="mdui-collapse-item mdui-collapse-item-open">
+          <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons"
+              >assistant</i
+            >
+            <div class="mdui-list-item-content">服务</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons"
+              >keyboard_arrow_down</i
+            >
+          </div>
+          <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+            <li
+              class="mdui-list-item mdui-ripple"
+              onclick="location.replace('/Issues/Navigation/')"
+            >
+              线下办证
+            </li>
+            <li
+              class="mdui-list-item mdui-ripple mdui-list-item-active"
+              onclick="location.replace('/Issues/Online/')"
+            >
+              线上办证
+            </li>
+          </ul>
+        </li>
+
+        <li
+          class="mdui-list-item mdui-ripple"
+          onclick="location.replace('/About/')"
+        >
+          <i class="mdui-list-item-icon mdui-icon material-icons"
+            >information</i
+          >
+          <div class="mdui-list-item-content">关于...</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mdui-container">
+      <div class="mdui-tab mdui-tab-full-width mdui-m-b-5" mdui-tab>
+        <a href="#typeAuto" class="mdui-ripple">自动发送</a>
+        <a href="#typeManual" class="mdui-ripple">手动申请</a>
+      </div>
+
+      <div id="typeAuto" class="mdui-typo">
+        <form onsubmit="SendApplication();" id="form">
+          <div class="mdui-container-fluid">
+            <div class="mdui-row">
+              <div
+                class="mdui-textfield mdui-textfield-floating-label mdui-col-xs-6"
+              >
+                <i class="mdui-icon material-icons">face</i>
+                <label class="mdui-textfield-label">鹭州内群群昵称</label>
+                <input class="mdui-textfield-input" required id="QQName" />
+              </div>
+              <div
+                class="mdui-textfield mdui-textfield-floating-label mdui-col-xs-6"
+              >
+                <i class="mdui-icon material-icons">fingerprint</i>
+                <label class="mdui-textfield-label">MCID（名称）</label>
+                <input class="mdui-textfield-input" required id="MCName" />
+              </div>
+              <div
+                class="mdui-textfield mdui-textfield-floating-label mdui-col-xs-6"
+              >
+                <i class="mdui-icon material-icons">business</i>
+                <label class="mdui-textfield-label">鹭州住址</label>
+                <input class="mdui-textfield-input" id="Address" />
+                <div class="mdui-textfield-helper">
+                  鹭州市+XX区+XX路（非必填）+地点，非必填，默认鹭州
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mdui-textfield mdui-textfield-floating-label">
+            <i class="mdui-icon material-icons">textsms</i>
+            <label class="mdui-textfield-label">正文</label>
+            <textarea class="mdui-textfield-input" id="Content"></textarea>
+            <div class="mdui-textfield-helper">
+              为什么要申请？有什么特殊需求？个人联系方式？（非必填）
+            </div>
+          </div>
+
+          <br />
+          <button type="submit" class="mdui-btn mdui-color-theme">
+            <i class="mdui-icon mdui-icon-left material-icons">send</i>
+            提交申请！
+          </button>
+        </form>
+        <div id="result"></div>
+      </div>
+
+      <div id="typeManual" class="mdui-typo">
+        <p><b>如何手动申请办理？</b></p>
+        <ol>
+          <li>进入鹭州工艺内群（请注意不是门户群）</li>
+          <li>
+            在群内发送以下格式的内容：
+            <blockquote class="mdui-m-b-1">
+              <p>【LPF CIDC】一代身份证办理</p>
+              <p>MDID - Minecraft<b>正版</b>用户名</p>
+              <p>
+                住址 -
+                鹭州住址，鹭州市+XX区+XX路（非必填）+地点，非必填，默认鹭州
+              </p>
+              <p>特殊需求，非必填</p>
+            </blockquote>
+            <p>完成后，请耐心等待办理人员处理，一般会在3个工作日内处理完毕。</p>
+          </li>
+          <li>
+            若想要优先办理，可以@
+            <kbd>AAA鹭州地铁传媒</kbd> 来让办理人员更快地注意到您。<br /><b
+              >请勿频繁发送@消息！</b
+            >
+          </li>
+          <li>
+            处理完成后，您应当收到如下的@消息：
+            <blockquote class="mdui-m-b-1">
+              <p>您的 鹭州市居民身份证（X代）</p>
+              <p>序号 XXX 已制作完毕！</p>
+              <p>目前已将成品PNG和PSD文件打包并上传。</p>
+              <p>身份证领取地址：</p>
+              <p>https://ftfs.lanzouu.com/cidcXXX</p>
+              <p>密码为您MC名称【前三位+后三位】</p>
+              <p>感谢您的配合！如有疑问请回复或邮件到 offical.fs@qq.com</p>
+            </blockquote>
+          </li>
+          <li>打开链接，输入密码，领取证件，办理完成。</li>
+        </ol>
+        <br />
+      </div>
+    </div>
+  </body>
+</html>

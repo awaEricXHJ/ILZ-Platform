@@ -1,0 +1,196 @@
+<html>
+  <head>
+    <title>随鹭办 - 线下办理</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"
+    />
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body
+    class="mdui-theme-primary-indigo mdui-theme-accent-indigo mdui-appbar-with-toolbar mdui-drawer-body-left"
+  >
+    <div class="appbar mdui-appbar mdui-appbar-fixed mdui-shadow-0">
+      <div class="mdui-toolbar mdui-color-theme">
+        <a
+          href="javascript:;"
+          class="mdui-btn mdui-btn-icon"
+          id="toggle"
+          onclick="var $ = mdui.$;var inst = new mdui.Drawer('#left-drawer');inst.toggle();"
+        >
+          <i class="mdui-icon material-icons">menu</i>
+        </a>
+        <a href="/" class="mdui-typo-title"> 随鹭办 Issue Luzhou </a>
+        <div class="mdui-toolbar-spacer"></div>
+        <a class="mdui-btn mdui-btn-icon" onclick="location.reload();">
+          <i class="mdui-icon material-icons">refresh</i>
+        </a>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+          <i class="mdui-icon material-icons">more_vert</i>
+        </a>
+      </div>
+    </div>
+
+    <div class="mdui-drawer mdui-drawer-open" id="left-drawer">
+      <ul class="mdui-list" mdui-collapse="{accordion: true}">
+        <li class="mdui-list-item mdui-ripple" onclick="location.replace('/')">
+          <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+          <div class="mdui-list-item-content">主页</div>
+        </li>
+
+        <li class="mdui-collapse-item mdui-collapse-item-open">
+          <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons"
+              >assistant</i
+            >
+            <div class="mdui-list-item-content">服务</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons"
+              >keyboard_arrow_down</i
+            >
+          </div>
+          <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+            <li
+              class="mdui-list-item mdui-ripple mdui-list-item-active"
+              onclick="location.replace('/Issues/Navigation/')"
+            >
+              线下办证
+            </li>
+            <li
+              class="mdui-list-item mdui-ripple"
+              onclick="location.replace('/Issues/Online/')"
+            >
+              线上办证
+            </li>
+          </ul>
+        </li>
+
+        <li
+          class="mdui-list-item mdui-ripple"
+          onclick="location.replace('/About/')"
+        >
+          <i class="mdui-list-item-icon mdui-icon material-icons"
+            >information</i
+          >
+          <div class="mdui-list-item-content">关于...</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mdui-container mdui-m-t-5">
+      <select
+        class="mdui-select"
+        mdui-select="{position: 'bottom'}"
+        id="typeSelect"
+      >
+        <option value="1">随鹭办办证点</option>
+        <option value="2" disabled>敬请期待</option>
+      </select>
+
+      <div id="typeILZ" class="mdui-m-t-3 mdui-container-fluid">
+        <div class="mdui-row">
+          <div class="mdui-card mdui-col-xs-4">
+            <div class="mdui-card-media">
+              <img src="https://iili.io/2DPnPwB.md.png" />
+            </div>
+
+            <div class="mdui-card-primary">
+              <div class="mdui-card-primary-title">政务大厅站</div>
+              <div class="mdui-card-primary-subtitle">No.1 GHP - IssueLZ</div>
+
+              <div class="mdui-chip">
+                <span class="mdui-chip-icon mdui-color-amber">
+                  <i class="mdui-icon material-icons">star_border</i>
+                </span>
+                <span class="mdui-chip-title">随鹭办办证点</span>
+              </div>
+
+              <div
+                class="mdui-chip"
+                mdui-tooltip="{content: 'M1 / 1 号线 - 古城西站', delay: 1000}"
+              >
+                <span class="mdui-chip-icon mdui-color-blue">
+                  <i class="mdui-icon material-icons">directions_transit</i>
+                </span>
+                <span class="mdui-chip-title">地铁</span>
+              </div>
+
+              <div
+                class="mdui-chip"
+                mdui-tooltip="{content: '【车站暂缓开通】', delay: 1000}"
+              >
+                <span class="mdui-chip-icon mdui-color-blue">
+                  <i class="mdui-icon material-icons">directions_bus</i>
+                </span>
+                <span class="mdui-chip-title">公交</span>
+              </div>
+            </div>
+
+            <div class="mdui-card-actions">
+              <button
+                class="mdui-btn mdui-ripple"
+                onclick="mdui.alert('1. 乘地铁到鹭州地铁古城西站<br>2. 从A口（综合服务中心）出站<br>3. 前往服务中心西楼<br>4. 乘电梯至6层<br>5. 到达', '导航')"
+              >
+                <i class="mdui-icon mdui-icon-left material-icons"
+                  >navigation</i
+                >
+                导航
+              </button>
+            </div>
+          </div>
+
+          <div class="mdui-card mdui-col-xs-4 mdui-m-l-1">
+            <div class="mdui-card-media">
+              <img src="https://iili.io/2Di74F2.md.png" />
+            </div>
+
+            <div class="mdui-card-primary">
+              <div class="mdui-card-primary-title">古城社区站（暂缓开通）</div>
+              <div class="mdui-card-primary-subtitle">No.2 ATA - IssueLZ</div>
+
+              <div class="mdui-chip">
+                <span class="mdui-chip-icon mdui-color-gray">
+                  <i class="mdui-icon material-icons">star_border</i>
+                </span>
+                <span class="mdui-chip-title">随鹭办办证点</span>
+              </div>
+
+              <div
+                class="mdui-chip"
+                mdui-tooltip="{content: '【车站暂缓开通】', delay: 1000}"
+              >
+                <span class="mdui-chip-icon mdui-color-blue">
+                  <i class="mdui-icon material-icons">directions_transit</i>
+                </span>
+                <span class="mdui-chip-title">地铁</span>
+              </div>
+
+              <div class="mdui-chip" disabled>
+                <span class="mdui-chip-icon mdui-color-gray">
+                  <i class="mdui-icon material-icons">directions_bus</i>
+                </span>
+                <span class="mdui-chip-title">公交</span>
+              </div>
+            </div>
+
+            <div class="mdui-card-actions">
+              <button
+                class="mdui-btn mdui-ripple"
+                disabled
+                onclick="mdui.alert('1. 乘地铁到鹭州地铁古城西站<br>2. 从A口（综合服务中心）出站<br>3. 前往服务中心西楼<br>4. 乘电梯至6层<br>5. 到达', '导航')"
+              >
+                <i class="mdui-icon mdui-icon-left material-icons"
+                  >navigation</i
+                >
+                导航
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
