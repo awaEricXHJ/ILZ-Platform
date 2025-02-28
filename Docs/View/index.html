@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>随鹭办 - 文档站</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"
+    />
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body
+    class="mdui-theme-primary-blue mdui-theme-accent-blue mdui-appbar-with-toolbar mdui-drawer-body-left"
+  >
+    <div class="appbar mdui-appbar mdui-appbar-fixed mdui-shadow-0">
+      <div class="mdui-toolbar mdui-color-theme">
+        <a
+          href="javascript:;"
+          class="mdui-btn mdui-btn-icon"
+          id="toggle"
+          onclick="var $ = mdui.$;var inst = new mdui.Drawer('#left-drawer');inst.toggle();"
+        >
+          <i class="mdui-icon material-icons">menu</i>
+        </a>
+        <a href="/" class="mdui-typo-title"> 随鹭办文档站 ILZ Docs </a>
+        <div class="mdui-toolbar-spacer"></div>
+        <a href="/" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content:'返回主站'}">
+            <i class="mdui-icon material-icons">home</i>
+        </a>
+        <a class="mdui-btn mdui-btn-icon" onclick="location.reload();">
+          <i class="mdui-icon material-icons">refresh</i>
+        </a>
+          <label class="mdui-checkbox" onclick="UpdateDevMode();">
+            <input type="checkbox" id="DevMode" />
+            <i class="mdui-checkbox-icon"></i>
+            开发者模式
+          </label>
+      </div>
+    </div>
+
+    <div class="mdui-drawer mdui-drawer-open" id="left-drawer">
+      <ul class="mdui-list" mdui-collapse="{accordion: true}">
+
+        <li class="mdui-list-item mdui-ripple" onclick="DocumentRedirect('A01')" id="ILD-A01">
+          <i class="mdui-list-item-icon mdui-icon material-icons">mood</i>
+          <div class="mdui-list-item-content">欢迎</div>
+        </li>
+
+        <li class="mdui-collapse-item mdui-collapse-item-open">
+          <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons"
+              >new_releases</i
+            >
+            <div class="mdui-list-item-content">重要提示</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons"
+              >keyboard_arrow_down</i
+            >
+          </div>
+          <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+            <li
+              class="mdui-list-item mdui-ripple"
+              id="ILD-001"
+              onclick="DocumentRedirect('001');"
+            >
+                网站的性质和保密规则
+            </li>
+          </ul>
+        </li>
+
+        <li
+          class="mdui-list-item mdui-ripple"
+          onclick="location.replace('/About/')"
+        >
+          <i class="mdui-list-item-icon mdui-icon material-icons"
+            >information</i
+          >
+          <div class="mdui-list-item-content">关于...</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mdui-container mdui-m-t-1">
+      <div class="mdui-typo" id="DocumentBox">
+        
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

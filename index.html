@@ -15,10 +15,11 @@
     />
     <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
+    
   </head>
   <body
-    class="mdui-theme-primary-indigo mdui-theme-accent-pink mdui-drawer-body-left mdui-appbar-with-toolbar"
+    id="body"
+    class="mdui-drawer-body-left mdui-appbar-with-toolbar"
   >
     <div class="mdui-appbar mdui-shadow-0 mdui-appbar-fixed">
       <div class="mdui-toolbar mdui-color-theme">
@@ -42,6 +43,10 @@
 
     <div class="mdui-container">
       <div class="mdui-tab" mdui-tab>
+        <a href="#mainpage" class="mdui-ripple mdui-ripple-white">
+          <i class="mdui-icon material-icons">grade</i>
+          <label>首页</label>
+        </a>
         <a href="#issue" class="mdui-ripple mdui-ripple-white">
           <i class="mdui-icon material-icons">send</i>
           <label>办证</label>
@@ -50,6 +55,95 @@
           <i class="mdui-icon material-icons">perm_contact_calendar</i>
           <label>咨询</label>
         </a>
+      </div>
+
+      <div id="mainpage">
+        <div class="mdui-panel">
+
+          <div class="mdui-panel-item mdui-panel-item-open">
+            <div class="mdui-panel-item-header">休闲小屋</div>
+            <div class="mdui-panel-item-body">
+              <ul class="mdui-list mdui-col-xs-12">
+                <a class="mdui-list-item mdui-ripple">
+                  <i class="mdui-list-item-avatar mdui-icon material-icons mdui-color-theme">brush</i>
+      
+                  <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title" id="header">随鹭办欢迎您...呃...现在几点了？</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line">
+                      <span class="mdui-text-color-theme-text">awa小发言 - 随鹭办贴心の提醒</span>
+                    </div>
+                  </div>
+                </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdui-panel">
+
+          <div class="mdui-panel-item mdui-panel-item-open">
+            <div class="mdui-panel-item-header">文档库</div>
+            <div class="mdui-panel-item-body">
+              <ul class="mdui-list mdui-col-xs-12">
+                <a class="mdui-list-item mdui-ripple" href="/Docs/View/?ID=A01">
+                  <i class="mdui-list-item-avatar mdui-icon material-icons mdui-color-blue">mood</i>
+      
+                  <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title">随鹭办欢迎您！！</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line">
+                      <span class="mdui-text-color-theme-text">随鹭办欢迎您，随鹭办文档库-A01</span>
+                    </div>
+                  </div>
+                </a>
+      
+                <a class="mdui-list-item mdui-ripple" href="/Docs/View/?ID=001">
+                  <i class="mdui-list-item-avatar mdui-icon material-icons mdui-color-red">new_releases</i>
+      
+                  <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title">这里可以办什么身份证？我需要提供的信息安全吗？</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line">
+                      <span class="mdui-text-color-theme-text">网站的性质和保密规则，随鹭办文档库-001</span>
+                    </div>
+                  </div>
+                </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mdui-panel">
+
+          <div class="mdui-panel-item mdui-panel-item-open">
+            <div class="mdui-panel-item-header">加入随鹭办团队</div>
+            <div class="mdui-panel-item-body">
+              <p><b>要求：</b>熟悉Photoshop的基础操作，能够上传文件并获得链接（推荐蓝奏云网盘）</p>
+              <ul class="mdui-list mdui-col-xs-12">
+                <a class="mdui-list-item mdui-ripple" href="mailto:recovery.ericxzm@outlook.com">
+                  <i class="mdui-list-item-avatar mdui-icon material-icons mdui-color-cyan">mail</i>
+      
+                  <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title">邮件地址-通用</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line">
+                      <span class="mdui-text-color-theme-text">awa_EricXHJ Outlook地址</span>
+                    </div>
+                  </div>
+                </a>
+      
+                <a class="mdui-list-item mdui-ripple" href="mailto:awaericxhj@gmail.com">
+                  <i class="mdui-list-item-avatar mdui-icon material-icons mdui-color-cyan">mail</i>
+      
+                  <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title">邮件地址-海外</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line">
+                      <span class="mdui-text-color-theme-text">awa_EricXHJ GMail地址</span>
+                    </div>
+                  </div>
+                </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
       </div>
 
       <div id="issue" class="mdui-p-a-5">
@@ -189,5 +283,6 @@
         </ul>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
