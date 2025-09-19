@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>随鹭办 - 线下办理</title>
+    <title>随鹭办 - 线上办理</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
 
@@ -87,7 +87,7 @@
       </div>
 
       <div id="typeAuto" class="mdui-typo">
-        <form onsubmit="SendApplication();" id="form">
+        <form id="form">
           <div class="mdui-container-fluid">
             <div class="mdui-row">
               <div
@@ -112,6 +112,16 @@
                 <input class="mdui-textfield-input" id="Address" />
                 <div class="mdui-textfield-helper">
                   鹭州市+XX区+XX路（非必填）+地点，非必填，默认鹭州
+                </div>
+              </div>
+              <div
+                class="mdui-textfield mdui-textfield-floating-label mdui-col-xs-6"
+              >
+                <i class="mdui-icon material-icons">email</i>
+                <label class="mdui-textfield-label">电子邮件</label>
+                <input class="mdui-textfield-input" type="email" name="email" required id="Email" />
+                <div class="mdui-textfield-helper">
+                  办证申请提交后发送提示到邮件地址
                 </div>
               </div>
             </div>
@@ -175,5 +185,12 @@
         <br />
       </div>
     </div>
+    <script src="./script.js"></script>
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+      emailjs.init('EDxK_mnZ0m-pYhjGr')
+    </script>
   </body>
 </html>
