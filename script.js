@@ -1,11 +1,14 @@
-const header = document.getElementById('header');
+const daily = document.getElementById('daily');
 const body = document.getElementById('body');
+
+function setupTimeTip()
+{
+  const header = document.getElementById('header');
   const now = new Date();
   const year = now.getFullYear();
   const month = now.getMonth() + 1;
   const day = now.getDate();
   const hour = now.getHours();
-
   if (month === 1 && day === 1) {
     body.classList.add('mdui-theme-primary-red');
     body.classList.add('mdui-theme-accent-red');
@@ -19,6 +22,17 @@ const body = document.getElementById('body');
     else if (hour <= 13) header.textContent = `干饭时间到！来和awa恰个饭吧（不是`;
     else if (hour <= 17) header.textContent = `下午啦！随鹭办欢迎您！`;
     else if (hour <= 20) header.textContent = `太阳落山了，随鹭办差不多该下班了吧）`;
-    else if (hour <= 23) header.textContent = `早点休息吧，今天暂停服务啦`;
-    
+    else if (hour <= 23) header.textContent = `早点休息吧，今天暂停服务啦`;   
   }
+}
+
+function setupDaily()
+{
+  fetch("https://api.polarisnet.work/api/v1/quotes/daily")
+  .then((response)=>response.json())
+  .then((data)=>daily.innerText=`${data.content} ——${data.source}`)
+  .catch((exception)=>daily.innerText="加载失败")
+}
+
+setupTimeTip();
+setupDaily();
